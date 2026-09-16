@@ -1,4 +1,4 @@
-# shwild.fnmatch - Authors
+# shwild.fnmatch - Authors <!-- omit in toc -->
 
 ## Major Contributors:
 

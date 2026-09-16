@@ -1,4 +1,4 @@
-# shwild.fnmatch - History
+# shwild.fnmatch - History <!-- omit in toc -->
 
 
 

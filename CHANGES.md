@@ -1,4 +1,4 @@
-#  **shwild.fnmatch** Changes
+# shwild.fnmatch - Changes <!-- omit in toc -->
 
 ## TBC
 

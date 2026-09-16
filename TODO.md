@@ -1,4 +1,4 @@
-# shwild.fnmatch - TODO list
+# shwild.fnmatch - TODO <!-- omit in toc -->
 
 ## shwild.fnmatch 0.8.x TODOs:
 

@@ -1,4 +1,4 @@
-# shwild.fnmatch
+# shwild.fnmatch <!-- omit in toc -->
 
 T.B.C.
 
