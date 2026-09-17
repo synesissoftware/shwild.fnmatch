@@ -185,13 +185,13 @@ jobs:
           test -f "${INSTALL_PREFIX}/include/shwild.fnmatch/shwild.fnmatch.hpp"
           config="${INSTALL_PREFIX}/lib/cmake/shwild.fnmatch/shwild.fnmatch-config.cmake"
           test -f "$config"
-          if ! grep -q 'find_dependency(cstring)' "$config"; then
-            echo "expected find_dependency(cstring) in package config" >&2
+          if ! grep -q 'find_dependency(cstring 4.0)' "$config"; then
+            echo "expected find_dependency(cstring 4.0) in package config" >&2
             cat "$config" >&2
             exit 1
           fi
-          if ! grep -q 'find_dependency(shwild)' "$config"; then
-            echo "expected find_dependency(shwild) in package config" >&2
+          if ! grep -q 'find_dependency(shwild 0.12)' "$config"; then
+            echo "expected find_dependency(shwild 0.12) in package config" >&2
             cat "$config" >&2
             exit 1
           fi
