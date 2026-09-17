@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+# implementation-only (PRIVATE) dependencies of the static core library,
+# required at consumer link time
+find_dependency(cstring @cstring_REQUIRED_VERSION_@)
+find_dependency(shwild @shwild_REQUIRED_VERSION_@)
+
+include("${CMAKE_CURRENT_LIST_DIR}/@EXPORT_NAME@-targets.cmake")
