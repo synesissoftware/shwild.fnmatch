@@ -1,0 +1,13 @@
+/* /////////////////////////////////////////////////////////////////////////
+ * File:    src/shwild.fnmatch.cpp
+ *
+ * Purpose: Empty C++ translation unit so the static core library records
+ *          C++ as a link-interface language (required by shwild).
+ *
+ * Created: 17th September 2026
+ * Updated: 17th September 2026
+ *
+ * ////////////////////////////////////////////////////////////////////// */
+
+
+/* ///////////////////////////// end of file //////////////////////////// */
