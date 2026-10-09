@@ -1,11 +1,10 @@
 /* /////////////////////////////////////////////////////////////////////////
  * File:    test/scratch/versions/main.cpp
  *
- * Purpose: Prints shwild.fnmatch composite version and efferent deps,
- *          using Diagnosticism for rich version strings.
+ * Purpose: Prints shwild.fnmatch composite version and efferent deps.
  *
  * Created: 17th September 2026
- * Updated: 17th September 2026
+ * Updated: 9th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -13,14 +12,10 @@
 #include <shwild.fnmatch/shwild.fnmatch.h>
 
 #include <cstring/cstring.h>
-#include <diagnosticism/version_string.hpp>
 #include <shwild/shwild.h>
-#include <stlsoft/stlsoft.h>
-#include <xtests/xtests.h>
 
 #include <iomanip>
 #include <iostream>
-#include <string>
 
 #include <stdlib.h>
 
@@ -39,24 +34,19 @@ version(
 ,   char const* libname
 ,   char const* macroname
 ,   T_integer   libver
-,   int         verMajor
-,   int         verMinor
-,   int         verPatch
-,   int         verAlphaBeta
 )
 {
-    std::string const rich = diagnosticism::calc_version_string(
-        verMajor
-    ,   verMinor
-    ,   verPatch
-    ,   verAlphaBeta
-    );
-
     stm
         << prefix
         << libname
         << ": v"
-        << rich
+        << ((libver >> 24) & 0xff)
+        << '.'
+        << ((libver >> 16) & 0xff)
+        << '.'
+        << ((libver >> 8) & 0xff)
+        << '.'
+        << ((libver >> 0) & 0xff)
         << " ("
         << macroname
         << " = 0x"
@@ -74,17 +64,7 @@ int main(int /* argc */, char* /* argv */[])
     {
         unsigned const libver = SHWILD_FNMATCH_VER;
 
-        version(
-            std::cout
-        ,   ""
-        ,   "shwild.fnmatch"
-        ,   "SHWILD_FNMATCH_VER"
-        ,   libver
-        ,   SHWILD_FNMATCH_VER_MAJOR
-        ,   SHWILD_FNMATCH_VER_MINOR
-        ,   SHWILD_FNMATCH_VER_PATCH
-        ,   SHWILD_FNMATCH_VER_ALPHABETA
-        );
+        version(std::cout, "", "shwild.fnmatch", "SHWILD_FNMATCH_VER", libver);
     }
 
     std::cout << "\n" << "efferent dependencies:" << std::endl;
@@ -92,81 +72,13 @@ int main(int /* argc */, char* /* argv */[])
     {
         unsigned const libver = CSTRING_VER;
 
-        version(
-            std::cout
-        ,   "\t"
-        ,   "cstring"
-        ,   "CSTRING_VER"
-        ,   libver
-        ,   CSTRING_VER_MAJOR
-        ,   CSTRING_VER_MINOR
-        ,   CSTRING_VER_PATCH
-        ,   CSTRING_VER_ALPHABETA
-        );
-    }
-
-    {
-        unsigned const libver = DIAGNOSTICISM_VER;
-
-        version(
-            std::cout
-        ,   "\t"
-        ,   "Diagnosticism"
-        ,   "DIAGNOSTICISM_VER"
-        ,   libver
-        ,   DIAGNOSTICISM_VER_MAJOR
-        ,   DIAGNOSTICISM_VER_MINOR
-        ,   DIAGNOSTICISM_VER_PATCH
-        ,   DIAGNOSTICISM_VER_ALPHABETA
-        );
+        version(std::cout, "\t", "cstring", "CSTRING_VER", libver);
     }
 
     {
         unsigned const libver = SHWILD_VER;
 
-        version(
-            std::cout
-        ,   "\t"
-        ,   "shwild"
-        ,   "SHWILD_VER"
-        ,   libver
-        ,   SHWILD_VER_MAJOR
-        ,   SHWILD_VER_MINOR
-        ,   SHWILD_VER_PATCH
-        ,   SHWILD_VER_ALPHABETA
-        );
-    }
-
-    {
-        unsigned const libver = _STLSOFT_VER;
-
-        version(
-            std::cout
-        ,   "\t"
-        ,   "STLSoft"
-        ,   "_STLSOFT_VER"
-        ,   libver
-        ,   _STLSOFT_VER_MAJOR
-        ,   _STLSOFT_VER_MINOR
-        ,   _STLSOFT_VER_PATCH
-        ,   _STLSOFT_VER_ALPHABETA
-        );
-    }
-
-    {
-        unsigned const libver = _XTESTS_VER;
-
-        version(
-            std::cout
-        ,   "\t"
-        ,   "xTests"
-        ,   "_XTESTS_VER"
-        ,   libver
-        ,   _XTESTS_VER_MAJOR
-        ,   _XTESTS_VER_MINOR
-        ,   _XTESTS_VER_PATCH
-        ,   _XTESTS_VER_ALPHABETA
-        );
+        version(std::cout, "\t", "shwild", "SHWILD_VER", libver);
     }
 
     return EXIT_SUCCESS;
@@ -174,3 +86,4 @@ int main(int /* argc */, char* /* argv */[])
 
 
 /* ///////////////////////////// end of file //////////////////////////// */
+
