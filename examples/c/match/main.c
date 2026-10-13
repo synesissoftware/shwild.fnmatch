@@ -1,5 +1,5 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:    examples/c/example.c.match/example.c.match.c
+ * File:    examples/c/match/main.c
  *
  * Purpose: C example of shwild_fnmatch_match().
  *

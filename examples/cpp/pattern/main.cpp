@@ -1,5 +1,5 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:    examples/cpp/example.cpp.pattern/example.cpp.pattern.cpp
+ * File:    examples/cpp/pattern/main.cpp
  *
  * Purpose: C++ example of shwild::fnmatch::Pattern.
  *

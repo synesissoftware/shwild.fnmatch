@@ -1,10 +1,10 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:    test.unit.shwild_fnmatch_match.c
+ * File:    test/unit/shwild_fnmatch_match/entry.c
  *
  * Purpose: Unit-tests for the shwild.fnmatch C API.
  *
  * Created: 8th May 2006
- * Updated: 17th September 2026
+ * Updated: 13th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
