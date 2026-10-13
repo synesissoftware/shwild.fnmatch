@@ -1,10 +1,10 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:    test.unit.shwild.fnmatch.match.cpp
+ * File:    test/unit/match/entry.cpp
  *
  * Purpose: Unit-tests for the shwild.fnmatch C++ match() overload.
  *
  * Created: 14th May 2006
- * Updated: 17th September 2026
+ * Updated: 13th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 

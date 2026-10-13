@@ -103,8 +103,8 @@ if (pattern.match("/usr/include/stlsoft")) {
 
 ## Examples
 
-* **examples/c/example.c.match** — C `shwild_fnmatch_match()` with `SHWILD_FNMATCH_F_PATHNAME`;
-* **examples/cpp/example.cpp.pattern** — C++ `shwild::fnmatch::Pattern`;
+* **examples/c/match** — C `shwild_fnmatch_match()` with `SHWILD_FNMATCH_F_PATHNAME`;
+* **examples/cpp/pattern** — C++ `shwild::fnmatch::Pattern`;
 
 
 ## Project Information
@@ -138,7 +138,7 @@ Public headers do not include either library. Installed CMake package configurat
 
 ##### Development Dependencies
 
-* [**Diagnosticism**](https://github.com/synesissoftware/Diagnosticism) — rich version strings in **test.scratch.versions**;
+* [**Diagnosticism**](https://github.com/synesissoftware/Diagnosticism) — still `find_package`'d when `BUILD_TESTING` (residual; not used by **test.scratch.versions**);
 * [**STLSoft**](https://github.com/synesissoftware/STLSoft) — required by **xTests** public headers (`BUILD_TESTING`);
 * [**xTests**](https://github.com/synesissoftware/xTests) — unit-test harness (`BUILD_TESTING`);
 

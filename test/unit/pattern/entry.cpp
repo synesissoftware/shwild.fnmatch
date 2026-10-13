@@ -1,10 +1,10 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:    test.unit.shwild.fnmatch.pattern.cpp
+ * File:    test/unit/pattern/entry.cpp
  *
  * Purpose: Unit-tests for shwild::fnmatch::Pattern.
  *
  * Created: 15th May 2006
- * Updated: 17th September 2026
+ * Updated: 13th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 

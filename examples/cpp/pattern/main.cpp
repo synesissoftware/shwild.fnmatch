@@ -1,10 +1,10 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:    examples/cpp/example.cpp.pattern/example.cpp.pattern.cpp
+ * File:    examples/cpp/pattern/main.cpp
  *
  * Purpose: C++ example of shwild::fnmatch::Pattern.
  *
  * Created: 17th September 2026
- * Updated: 17th September 2026
+ * Updated: 13th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
