@@ -1,0 +1,86 @@
+/* /////////////////////////////////////////////////////////////////////////
+ * File:    test/scratch/versions/main.cpp
+ *
+ * Purpose: Prints shwild.fnmatch composite version and efferent deps.
+ *
+ * Created: 17th September 2026
+ * Updated: 9th October 2026
+ *
+ * ////////////////////////////////////////////////////////////////////// */
+
+
+#include <shwild.fnmatch/shwild.fnmatch.h>
+
+#include <cstring/cstring.h>
+#include <shwild/shwild.h>
+
+#include <iomanip>
+#include <iostream>
+
+#include <stdlib.h>
+
+
+template<
+    typename T_stream
+,   typename T_integer
+>
+void
+version(
+    T_stream&   stm
+,   char const* prefix
+,   char const* libname
+,   char const* macroname
+,   T_integer   libver
+)
+{
+    stm
+        << prefix
+        << libname
+        << ": v"
+        << ((libver >> 24) & 0xff)
+        << '.'
+        << ((libver >> 16) & 0xff)
+        << '.'
+        << ((libver >> 8) & 0xff)
+        << '.'
+        << ((libver >> 0) & 0xff)
+        << " ("
+        << macroname
+        << " = 0x"
+        << std::hex << std::setfill('0') << std::setw(8)
+        << static_cast<unsigned>(libver)
+        << std::dec
+        << ")"
+        << std::endl
+        ;
+}
+
+
+int main(int /* argc */, char* /* argv */[])
+{
+    {
+        unsigned const libver = SHWILD_FNMATCH_VER;
+
+        version(std::cout, "", "shwild.fnmatch", "SHWILD_FNMATCH_VER", libver);
+    }
+
+    std::cout << "\n" << "efferent dependencies:" << std::endl;
+
+    {
+        unsigned const libver = CSTRING_VER;
+
+        version(std::cout, "\t", "cstring", "CSTRING_VER", libver);
+    }
+
+    {
+        unsigned const libver = SHWILD_VER;
+
+        version(std::cout, "\t", "shwild", "SHWILD_VER", libver);
+    }
+
+    return EXIT_SUCCESS;
+}
+
+
+/* ///////////////////////////// end of file //////////////////////////// */
+
