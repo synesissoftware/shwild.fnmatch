@@ -4,7 +4,7 @@
  * Purpose: C example of shwild_fnmatch_match().
  *
  * Created: 17th September 2026
- * Updated: 17th September 2026
+ * Updated: 13th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
