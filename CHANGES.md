@@ -1,14 +1,6 @@
 # shwild.fnmatch - Changes <!-- omit in toc -->
 
 
-## Unreleased
-
-* Adopted the **misc-dev-scripts** CMake helper gold (SisClr colours; `cmake --build` in place of **MakeCmd**; `MSYSTEM` no longer selects MinGW, use `--mingw`; native `.cmd` runners; **prepare_cmake.sh** retains `--stlsoft-root-dir`);
-* **run_all_unit_tests.sh** is now unit-only; **run_all_automated_tests.sh** runs unit then component, **run_all_scratch_tests.sh** no longer runs performance programs, and **run_all_component_tests.sh**, **run_all_performance_tests.sh** and their native `.cmd` counterparts were added;
-* **test.scratch.versions** now prints the Phase 3 one-line form (`vJ.N.P.AB (MACRO = 0x........)`), and no longer links **Diagnosticism**, **STLSoft**, or **xTests**; **cstring** and **shwild** remain as its efferent dependencies;
-* CI **component tests** step now runs **run_all_component_tests.sh**;
-
-
 ## 0.9.0-rc2 - 14th October 2026
 
 * version:
