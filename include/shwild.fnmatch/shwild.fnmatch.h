@@ -4,7 +4,7 @@
  * Purpose: fnmatch() implementation based on shwild.
  *
  * Created: 8th May 2006
- * Updated: 18th September 2026
+ * Updated: 14th October 2026
  *
  * Home:    https://github.com/synesissoftware/shwild.fnmatch
  *
@@ -56,7 +56,7 @@
 # define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_H_SHWILD_FNMATCH_MAJOR       1
 # define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_H_SHWILD_FNMATCH_MINOR       1
 # define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_H_SHWILD_FNMATCH_REVISION    0
-# define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_H_SHWILD_FNMATCH_EDIT        6
+# define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_H_SHWILD_FNMATCH_EDIT        9
 #endif /* !SHWILD_FNMATCH_DOCUMENTATION_SKIP_SECTION */
 
 /** \def SHWILD_FNMATCH_VER_MAJOR
@@ -71,6 +71,10 @@
  * The patch version number of **shwild.fnmatch**.
  */
 
+/** \def SHWILD_FNMATCH_VER_RELSTATUS
+ * The release-status discriminator (low byte of \c SHWILD_FNMATCH_VER).
+ */
+
 /** \def SHWILD_FNMATCH_VER
  * The current composite version number of **shwild.fnmatch**.
  */
@@ -78,17 +82,19 @@
 #define SHWILD_FNMATCH_VER_MAJOR       0
 #define SHWILD_FNMATCH_VER_MINOR       9
 #define SHWILD_FNMATCH_VER_PATCH       0
-#define SHWILD_FNMATCH_VER_ALPHABETA   0xC1
+#define SHWILD_FNMATCH_VER_RELSTATUS   0xC2
 
 #define SHWILD_FNMATCH_VER \
     (0\
         |   (   SHWILD_FNMATCH_VER_MAJOR       << 24   ) \
         |   (   SHWILD_FNMATCH_VER_MINOR       << 16   ) \
         |   (   SHWILD_FNMATCH_VER_PATCH       <<  8   ) \
-        |   (   SHWILD_FNMATCH_VER_ALPHABETA   <<  0   ) \
+        |   (   SHWILD_FNMATCH_VER_RELSTATUS   <<  0   ) \
     )
 
 #ifndef SHWILD_FNMATCH_DOCUMENTATION_SKIP_SECTION
+# define SHWILD_FNMATCH_VER_AB                              SHWILD_FNMATCH_VER_RELSTATUS
+# define SHWILD_FNMATCH_VER_ALPHABETA                       SHWILD_FNMATCH_VER_RELSTATUS
 # define SHWILD_FNMATCH_VER_REVISION                        SHWILD_FNMATCH_VER_PATCH
 #endif /* !SHWILD_FNMATCH_DOCUMENTATION_SKIP_SECTION */
 

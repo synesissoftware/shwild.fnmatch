@@ -73,10 +73,8 @@ $ ./run_all_unit_tests.sh
 
 The implementation **PRIVATE**-links **cstring** and **shwild**. Public
 headers do not include either. Tests require **STLSoft** and **xTests**
-(when `BUILD_TESTING` is on). The scratch **versions** program
-additionally requires **Diagnosticism** for rich version-string
-formatting. Because **shwild** is C++, a C application must still link
-with a C++ compiler/runtime (CMake: enable **CXX**).
+(when `BUILD_TESTING` is on). Because **shwild** is C++, a C application
+must still link with a C++ compiler/runtime (CMake: enable **CXX**).
 
 
 ## Q6: "How does this differ from POSIX fnmatch()?"

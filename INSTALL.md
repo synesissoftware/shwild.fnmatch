@@ -8,9 +8,10 @@ simply include **shwild.fnmatch/shwild.fnmatch.h** (or
 implementation.
 
 The implementation requires installed **cstring** and **shwild** CMake
-packages. When testing is enabled, **STLSoft**, **xTests**, and
-**Diagnosticism** must also be findable (**Diagnosticism** is used by
-**test.scratch.versions** for rich version strings).
+packages. When testing is enabled, **STLSoft** and **xTests** must also
+be findable. Top-level **CMakeLists.txt** still `find_package`s
+**Diagnosticism** when `BUILD_TESTING` (residual; **test.scratch.versions**
+no longer uses it).
 
 
 ## Table of Contents <!-- omit in toc -->
@@ -35,9 +36,10 @@ The primary choice for installation is by use of **CMake**.
 2. Install **cstring** and **shwild** so that `find_package(cstring)` and
    `find_package(shwild)` succeed. Point **CMake** at that prefix via
    `CMAKE_PREFIX_PATH` (or an equivalent toolchain/package config path).
-   When building tests, also install **STLSoft**, **xTests**, and
-   **Diagnosticism** under the same prefix (or otherwise make them
-   findable).
+   When building tests, also install **STLSoft** and **xTests** under the
+   same prefix (or otherwise make them findable). Until the residual
+   **Diagnosticism** `find_package` is removed, install that package too
+   (or otherwise make it findable).
 
 3. Prepare the CMake configuration, via the **prepare_cmake.sh** script, as
    in:
