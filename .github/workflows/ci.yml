@@ -12,7 +12,6 @@ on:
       - dev
       - boilerplate
       - idiomatic
-      - initial
       - rc1
       - rc2
       - rc3
