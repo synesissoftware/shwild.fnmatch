@@ -1,6 +1,14 @@
 # shwild.fnmatch - Changes <!-- omit in toc -->
 
 
+## 0.9.0-rc3 - 14th October 2026
+
+* Synced tip **cmake-helpers** runners;
+* Advanced `SHWILD_FNMATCH_VER_RELSTATUS` to `0xC3` (rc3);
+* Phase **4c** polish: `PROGRAM_NAME` **test.scratch.versions**;
+* CI hygiene: execute-bit restore and Windows **.cmd** dogfood;
+
+
 ## 0.9.0-rc2 - 14th October 2026
 
 * version:
