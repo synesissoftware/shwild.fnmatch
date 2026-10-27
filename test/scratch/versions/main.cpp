@@ -4,7 +4,7 @@
  * Purpose: Prints shwild.fnmatch composite version and efferent deps.
  *
  * Created: 17th September 2026
- * Updated: 9th October 2026
+ * Updated: 27th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -12,7 +12,20 @@
 #include <shwild.fnmatch/shwild.fnmatch.h>
 
 #include <cstring/cstring.h>
+
+#ifdef HAS_Diagnosticism
+# include <diagnosticism/diagnosticism.h>
+#endif
+
 #include <shwild/shwild.h>
+
+#ifdef HAS_STLSoft
+# include <stlsoft/stlsoft.h>
+#endif
+
+#ifdef HAS_xTests
+# include <xtests/xtests.h>
+#endif
 
 #include <iomanip>
 #include <iostream>
@@ -58,18 +71,42 @@ version(
 
 int main(int /* argc */, char* /* argv */[])
 {
+    int efferents_count = 0;
+
     {
         unsigned const libver = SHWILD_FNMATCH_VER;
 
         version(std::cout, "", "shwild.fnmatch", "SHWILD_FNMATCH_VER", libver);
     }
 
-    std::cout << "\n" << "efferent dependencies:" << std::endl;
+    if (0 == efferents_count++)
+    {
+        std::cout << "\n" << "efferent dependencies:" << std::endl;
+    }
 
     {
         unsigned const libver = CSTRING_VER;
 
         version(std::cout, "\t", "cstring", "CSTRING_VER", libver);
+    }
+
+#ifdef HAS_Diagnosticism
+
+    if (0 == efferents_count++)
+    {
+        std::cout << "\n" << "efferent dependencies:" << std::endl;
+    }
+
+    {
+        unsigned const libver = DIAGNOSTICISM_VER;
+
+        version(std::cout, "\t", "Diagnosticism", "DIAGNOSTICISM_VER", libver);
+    }
+#endif
+
+    if (0 == efferents_count++)
+    {
+        std::cout << "\n" << "efferent dependencies:" << std::endl;
     }
 
     {
@@ -78,9 +115,36 @@ int main(int /* argc */, char* /* argv */[])
         version(std::cout, "\t", "shwild", "SHWILD_VER", libver);
     }
 
+#ifdef HAS_STLSoft
+
+    if (0 == efferents_count++)
+    {
+        std::cout << "\n" << "efferent dependencies:" << std::endl;
+    }
+
+    {
+        unsigned const libver = _STLSOFT_VER;
+
+        version(std::cout, "\t", "STLSoft", "_STLSOFT_VER", libver);
+    }
+#endif
+
+#ifdef HAS_xTests
+
+    if (0 == efferents_count++)
+    {
+        std::cout << "\n" << "efferent dependencies:" << std::endl;
+    }
+
+    {
+        unsigned const libver = _XTESTS_VER;
+
+        version(std::cout, "\t", "xTests", "_XTESTS_VER", libver);
+    }
+#endif
+
     return EXIT_SUCCESS;
 }
-
 
 /* ///////////////////////////// end of file //////////////////////////// */
 
