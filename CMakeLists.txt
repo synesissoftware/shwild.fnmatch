@@ -5,7 +5,7 @@
 # Purpose:  Top-level CMake lists file for shwild.fnmatch
 #
 # Created:  17th September 2026
-# Updated:  17th September 2026
+# Updated:  27th October 2026
 #
 # ######################################################################## #
 
@@ -162,9 +162,12 @@ if(BUILD_TESTING)
 		message("-- CMake package STLSoft found (version ${STLSoft_VERSION}; ${STLSoft_REQUIRED_VERSION_} requested)")
 	endif()
 
-	if(DEFINED STLSOFT_INCLUDE_DIR OR DEFINED STLSoft_FOUND)
+	if(DEFINED STLSOFT_INCLUDE_DIR)
 
 		include_directories(${STLSOFT_INCLUDE_DIR})
+	endif()
+
+	if(DEFINED STLSOFT_INCLUDE_DIR OR DEFINED STLSoft_FOUND)
 
 		add_compile_definitions(HAS_STLSOFT)
 		add_compile_definitions(HAS_STLSoft)
@@ -181,6 +184,11 @@ find_package(cstring ${cstring_REQUIRED_VERSION_} REQUIRED)
 
 message("-- CMake package cstring found (version ${cstring_VERSION}; ${cstring_REQUIRED_VERSION_} requested)")
 
+add_compile_definitions(
+	HAS_cstring
+	HAS_CSTRING
+)
+
 
 # ############################
 # Diagnosticism
@@ -195,6 +203,11 @@ if(BUILD_TESTING)
 	find_package(Diagnosticism ${Diagnosticism_REQUIRED_VERSION_} REQUIRED)
 
 	message("-- CMake package Diagnosticism found (version ${Diagnosticism_VERSION}; ${Diagnosticism_REQUIRED_VERSION_} requested)")
+
+	add_compile_definitions(
+		HAS_Diagnosticism
+		HAS_DIAGNOSTICISM
+	)
 endif(BUILD_TESTING)
 
 
@@ -207,19 +220,29 @@ find_package(shwild ${shwild_REQUIRED_VERSION_} REQUIRED)
 
 message("-- CMake package shwild found (version ${shwild_VERSION}; ${shwild_REQUIRED_VERSION_} requested)")
 
+add_compile_definitions(
+	HAS_shwild
+	HAS_SHWILD
+)
+add_compile_definitions(XTESTS_HAS_SHWILD) # Legacy form, and should be removed later
 
 # ############################
 # xTests
 
 if(BUILD_TESTING)
 
-	set(xTests_REQUIRED_VERSION_ 0.26)
+	set(xTests_REQUIRED_VERSION_ 0.28)
 
 	find_package(xTests ${xTests_REQUIRED_VERSION_} REQUIRED)
 
 	message("-- CMake package xTests found (version ${xTests_VERSION}; ${xTests_REQUIRED_VERSION_} requested)")
 
-	add_compile_definitions(XTESTS_HAS_SHWILD)
+	add_compile_definitions(
+		HAS_xTests
+		HAS_XTESTS
+	)
+
+	add_compile_definitions(SHWILD_FNMATCH_HAS_SHWILD)
 endif(BUILD_TESTING)
 
 

@@ -1,6 +1,11 @@
 # shwild.fnmatch - Changes <!-- omit in toc -->
 
 
+## 0.9.0-rc4 - 27th October 2026
+
+* Defined `HAS_<Pkg>` and `HAS_<PKG>` when a Synesis package other than **STLSoft** is detected;
+
+
 ## 0.9.0-rc3 - 14th October 2026
 
 * Synced tip **cmake-helpers** runners;
