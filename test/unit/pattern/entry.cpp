@@ -4,7 +4,7 @@
  * Purpose: Unit-tests for shwild::fnmatch::Pattern.
  *
  * Created: 15th May 2006
- * Updated: 13th October 2026
+ * Updated: 30th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -63,7 +63,7 @@ int main(int argc, char* argv[])
 
     XTESTS_COMMANDLINE_PARSE_VERBOSITY(argc, argv, &verbosity);
 
-    if (XTESTS_START_RUNNER("test.unit.shwild.fnmatch.pattern", verbosity))
+    if (XTESTS_START_RUNNER(__FILE__, verbosity))
     {
         XTESTS_RUN_CASE(test_literals);
         XTESTS_RUN_CASE(test_ignorecase);
