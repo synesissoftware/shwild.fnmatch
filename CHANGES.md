@@ -1,7 +1,7 @@
 # shwild.fnmatch - Changes <!-- omit in toc -->
 
 
-## 0.9.0-rc5 - 31st October 2026
+## 0.9.0-rc5 - 1st November 2026
 
 * testing:
   * automated-test runners pass `__FILE__` to `XTESTS_START_RUNNER`;
