@@ -1,6 +1,17 @@
 # shwild.fnmatch - Changes <!-- omit in toc -->
 
 
+## 0.9.0-rc5 - 1st November 2026
+
+* testing:
+  * automated-test runners pass `__FILE__` to `XTESTS_START_RUNNER`;
+* build:
+  * the **Check test names** job runs **STLSoft** **check_unit_test_names.rb** over **examples** and **test**;
+  * **xTests** minimum is **0.28.2**;
+* documentation and boilerplate:
+  * **NEWS.md** records **0.9.0-rc5**;
+
+
 ## 0.9.0-rc4 - 27th October 2026
 
 * Defined `HAS_<Pkg>` and `HAS_<PKG>` when a Synesis package other than **STLSoft** is detected;

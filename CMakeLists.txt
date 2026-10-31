@@ -5,7 +5,7 @@
 # Purpose:  Top-level CMake lists file for shwild.fnmatch
 #
 # Created:  17th September 2026
-# Updated:  27th October 2026
+# Updated:  30th October 2026
 #
 # ######################################################################## #
 
@@ -231,7 +231,7 @@ add_compile_definitions(XTESTS_HAS_SHWILD) # Legacy form, and should be removed 
 
 if(BUILD_TESTING)
 
-	set(xTests_REQUIRED_VERSION_ 0.28)
+	set(xTests_REQUIRED_VERSION_ 0.28.2)
 
 	find_package(xTests ${xTests_REQUIRED_VERSION_} REQUIRED)
 
