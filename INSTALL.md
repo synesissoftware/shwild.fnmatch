@@ -7,11 +7,11 @@ simply include **shwild.fnmatch/shwild.fnmatch.h** (or
 **shwild.fnmatch/shwild.fnmatch.hpp**), and compile-in or link-in the
 implementation.
 
-The implementation requires installed **cstring** and **shwild** CMake
-packages. When testing is enabled, **STLSoft** and **xTests** must also
-be findable. Top-level **CMakeLists.txt** still `find_package`s
-**Diagnosticism** when `BUILD_TESTING` (residual; **test.scratch.versions**
-no longer uses it).
+The implementation requires installed **cstring** **4.0.19**+ and **shwild**
+**0.12.16**+ CMake packages. When testing is enabled, **STLSoft** **1.11.5**+
+and **xTests** must also be findable. Top-level **CMakeLists.txt** still
+`find_package`s **Diagnosticism** **0.4.3**+ when `BUILD_TESTING` (residual;
+**test.scratch.versions** no longer uses it).
 
 
 ## Table of Contents <!-- omit in toc -->

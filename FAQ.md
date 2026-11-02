@@ -23,7 +23,7 @@ it will be used to create one.
 See [INSTALL.md](./INSTALL.md) for the recommended **CMake** flow
 (**prepare_cmake.sh**, then **build_cmake.sh**).
 
-Install **cstring** and **shwild** first, then:
+Install **cstring** **4.0.19**+ and **shwild** **0.12.16**+ first, then:
 
 ```bash
 $ CMAKE_PREFIX_PATH=/path/to/sis-deps ./prepare_cmake.sh -m

@@ -1,6 +1,14 @@
 # shwild.fnmatch - Changes <!-- omit in toc -->
 
 
+## 0.9.0-rc6 - 2nd November 2026
+
+* build:
+  * **cstring** minimum is **4.0.19**;
+  * **Diagnosticism** minimum is **0.4.3**;
+  * **shwild** minimum is **0.12.16**;
+  * **STLSoft** minimum is **1.11.5**;
+
 ## 0.9.0-rc5 - 1st November 2026
 
 * testing:
