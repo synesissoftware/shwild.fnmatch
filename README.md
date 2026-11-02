@@ -130,16 +130,16 @@ Libraries upon which **shwild.fnmatch** depends:
 
 ##### Runtime Dependencies (aka "Normal Dependencies")
 
-* [**cstring**](https://github.com/synesissoftware/cstring) — implementation (**PRIVATE**; not on the public include path);
-* [**shwild**](https://github.com/synesissoftware/shwild) — implementation (**PRIVATE**; not on the public include path);
+* [**cstring**](https://github.com/synesissoftware/cstring) **4.0.19**+ — implementation (**PRIVATE**; not on the public include path);
+* [**shwild**](https://github.com/synesissoftware/shwild) **0.12.16**+ — implementation (**PRIVATE**; not on the public include path);
 
 Public headers do not include either library. Installed CMake package configuration calls `find_dependency()` for both so a static consumer can link.
 
 
 ##### Development Dependencies
 
-* [**Diagnosticism**](https://github.com/synesissoftware/Diagnosticism) — still `find_package`'d when `BUILD_TESTING` (residual; not used by **test.scratch.versions**);
-* [**STLSoft**](https://github.com/synesissoftware/STLSoft) — required by **xTests** public headers (`BUILD_TESTING`);
+* [**Diagnosticism**](https://github.com/synesissoftware/Diagnosticism) **0.4.3**+ — still `find_package`'d when `BUILD_TESTING` (residual; not used by **test.scratch.versions**);
+* [**STLSoft**](https://github.com/synesissoftware/STLSoft) **1.11.5**+ — required by **xTests** public headers (`BUILD_TESTING`);
 * [**xTests**](https://github.com/synesissoftware/xTests) — unit-test harness (`BUILD_TESTING`);
 
 

@@ -5,7 +5,7 @@
 # Purpose:  Top-level CMake lists file for shwild.fnmatch
 #
 # Created:  17th September 2026
-# Updated:  30th October 2026
+# Updated:  2nd November 2026
 #
 # ######################################################################## #
 
@@ -155,7 +155,7 @@ if(BUILD_TESTING)
 		set(STLSOFT_INCLUDE_DIR $ENV{STLSOFT}/include)
 	else()
 
-		set(STLSoft_REQUIRED_VERSION_ 1.11)
+		set(STLSoft_REQUIRED_VERSION_ 1.11.5)
 
 		find_package(STLSoft ${STLSoft_REQUIRED_VERSION_} REQUIRED)
 
@@ -178,7 +178,7 @@ endif(BUILD_TESTING)
 # ############################
 # cstring
 
-set(cstring_REQUIRED_VERSION_ 4.0)
+set(cstring_REQUIRED_VERSION_ 4.0.19)
 
 find_package(cstring ${cstring_REQUIRED_VERSION_} REQUIRED)
 
@@ -198,7 +198,7 @@ add_compile_definitions(
 
 if(BUILD_TESTING)
 
-	set(Diagnosticism_REQUIRED_VERSION_ 0.3)
+	set(Diagnosticism_REQUIRED_VERSION_ 0.4.3)
 
 	find_package(Diagnosticism ${Diagnosticism_REQUIRED_VERSION_} REQUIRED)
 
@@ -214,7 +214,7 @@ endif(BUILD_TESTING)
 # ############################
 # shwild
 
-set(shwild_REQUIRED_VERSION_ 0.12)
+set(shwild_REQUIRED_VERSION_ 0.12.16)
 
 find_package(shwild ${shwild_REQUIRED_VERSION_} REQUIRED)
 
