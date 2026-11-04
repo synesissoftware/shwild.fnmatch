@@ -9,7 +9,7 @@ implementation.
 
 The implementation requires installed **cstring** **4.0.19**+ and **shwild**
 **0.12.16**+ CMake packages. When testing is enabled, **STLSoft** **1.11.5**+
-and **xTests** must also be findable. Top-level **CMakeLists.txt** still
+and **xTests** **0.28.2**+ must also be findable. Top-level **CMakeLists.txt** still
 `find_package`s **Diagnosticism** **0.4.3**+ when `BUILD_TESTING` (residual;
 **test.scratch.versions** no longer uses it).
 

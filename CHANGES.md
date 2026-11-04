@@ -1,6 +1,16 @@
 # shwild.fnmatch - Changes <!-- omit in toc -->
 
 
+## 0.9.0 - 4th November 2026
+
+* version:
+  * Set `SHWILD_FNMATCH_VER_RELSTATUS` to `0xFF` in **include/shwild.fnmatch/shwild.fnmatch.h**;
+* build:
+  * Efferent floors stay at the latest full releases: **cstring** **4.0.19**, **Diagnosticism** **0.4.3**, **shwild** **0.12.16**, **STLSoft** **1.11.5**, **xTests** **0.28.2**;
+* documentation:
+  * **README.md** states the **xTests** **0.28.2**+ development requisite;
+
+
 ## 0.9.0-rc6 - 2nd November 2026
 
 * build:

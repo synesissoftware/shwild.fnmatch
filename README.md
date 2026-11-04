@@ -140,7 +140,7 @@ Public headers do not include either library. Installed CMake package configurat
 
 * [**Diagnosticism**](https://github.com/synesissoftware/Diagnosticism) **0.4.3**+ — still `find_package`'d when `BUILD_TESTING` (residual; not used by **test.scratch.versions**);
 * [**STLSoft**](https://github.com/synesissoftware/STLSoft) **1.11.5**+ — required by **xTests** public headers (`BUILD_TESTING`);
-* [**xTests**](https://github.com/synesissoftware/xTests) — unit-test harness (`BUILD_TESTING`);
+* [**xTests**](https://github.com/synesissoftware/xTests) **0.28.2**+ — unit-test harness (`BUILD_TESTING`);
 
 
 #### Afferent (fan-in)
