@@ -3,6 +3,7 @@
 
 | Date                | News Item                                                                                                | Details |
 | ------------------- | -------------------------------------------------------------------------------------------------------- | ------- |
+| 6th November 2026  | Release of [shwild.fnmatch 0.9.1](https://github.com/synesissoftware/shwild.fnmatch/releases/tag/0.9.1) | CI installs **woad** before **xTests**; `// namespace` closer |
 | 4th November 2026  | Release of [shwild.fnmatch 0.9.0](https://github.com/synesissoftware/shwild.fnmatch/releases/tag/0.9.0) | First stable release (`SHWILD_FNMATCH_VER_RELSTATUS` `0xFF`); floors unchanged |
 | 2nd November 2026  | Release of [shwild.fnmatch 0.9.0-rc6](https://github.com/synesissoftware/shwild.fnmatch/releases/tag/0.9.0-rc6) | **cstring** **4.0.19**; **Diagnosticism** **0.4.3**; **shwild** **0.12.16**; **STLSoft** **1.11.5** |
 | 1st November 2026  | Release of [shwild.fnmatch 0.9.0-rc5](https://github.com/synesissoftware/shwild.fnmatch/releases/tag/0.9.0-rc5) | `__FILE__` runners (**xTests** 0.28.2); **Check test names** |

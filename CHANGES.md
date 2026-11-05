@@ -1,6 +1,14 @@
 # shwild.fnmatch - Changes <!-- omit in toc -->
 
 
+## 0.9.1 - 6th November 2026
+
+* build:
+  * CI installs **woad** before **xTests**, which **xTests** 0.29 requires;
+* documentation and boilerplate:
+  * the C++ namespace closer in **include/shwild.fnmatch/shwild.fnmatch.hpp** is spelled `// namespace`;
+
+
 ## 0.9.0 - 4th November 2026
 
 * version:
