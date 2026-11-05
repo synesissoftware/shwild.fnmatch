@@ -4,7 +4,7 @@
  * Purpose: C++ root file for the shwild.fnmatch C-API.
  *
  * Created: 17th June 2005
- * Updated: 17th September 2026
+ * Updated: 6th November 2026
  *
  * Home:    https://github.com/synesissoftware/shwild.fnmatch
  *
@@ -56,7 +56,7 @@
 # define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_HPP_SHWILD_FNMATCH_MAJOR     1
 # define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_HPP_SHWILD_FNMATCH_MINOR     1
 # define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_HPP_SHWILD_FNMATCH_REVISION  0
-# define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_HPP_SHWILD_FNMATCH_EDIT      4
+# define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_HPP_SHWILD_FNMATCH_EDIT      5
 #endif /* !SHWILD_FNMATCH_DOCUMENTATION_SKIP_SECTION */
 
 
@@ -232,8 +232,8 @@ Pattern::match(char const* string) const
  */
 
 #if !defined(SHWILD_FNMATCH_NO_NAMESPACE)
-} /* namespace fnmatch */
-} /* namespace shwild */
+} // namespace fnmatch
+} // namespace shwild
 #endif /* !SHWILD_FNMATCH_NO_NAMESPACE */
 
 
