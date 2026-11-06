@@ -4,7 +4,7 @@
  * Purpose: fnmatch() implementation based on shwild.
  *
  * Created: 8th May 2006
- * Updated: 4th November 2026
+ * Updated: 6th November 2026
  *
  * Home:    https://github.com/synesissoftware/shwild.fnmatch
  *
@@ -56,7 +56,7 @@
 # define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_H_SHWILD_FNMATCH_MAJOR       1
 # define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_H_SHWILD_FNMATCH_MINOR       1
 # define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_H_SHWILD_FNMATCH_REVISION    2
-# define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_H_SHWILD_FNMATCH_EDIT        14
+# define SHWILD_FNMATCH_VER_SHWILD_FNMATCH_H_SHWILD_FNMATCH_EDIT        15
 #endif /* !SHWILD_FNMATCH_DOCUMENTATION_SKIP_SECTION */
 
 /** \def SHWILD_FNMATCH_VER_MAJOR
@@ -81,7 +81,7 @@
 
 #define SHWILD_FNMATCH_VER_MAJOR       0
 #define SHWILD_FNMATCH_VER_MINOR       9
-#define SHWILD_FNMATCH_VER_PATCH       0
+#define SHWILD_FNMATCH_VER_PATCH       1
 #define SHWILD_FNMATCH_VER_RELSTATUS   0xFF
 
 #define SHWILD_FNMATCH_VER \
